@@ -31,7 +31,7 @@ def app_factory(name, cache):
 
 
 def auto_app():
-    if "DEBUG" in os.environ:
+    if "RWCACHE" in os.environ:
         return app_factory("debug", CacheRW())
     else:
         return app_factory("prod", CacheRO())
